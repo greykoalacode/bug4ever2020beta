@@ -1,0 +1,205 @@
+doctype html
+html
+    include components/head.pug 
+        
+    body
+        include components/header.pug
+
+        .main-wrapper
+          .greet
+            div.ml4
+              span.letters.letters-1 Ready
+              span.letters.letters-2 For BUG4EVER ?
+              span.letters.letters-3 Let's Go!
+        #main
+          .nav-mobile
+            button.menu__button
+              div
+                div
+              | Menu
+            section.menu__body(hidden)
+              .menu__header
+                label 
+                  div
+                  p BUG4EVER
+                button(title="Close")
+                  | X
+              .menu__links
+                a(href="#about") About
+                a(href="#schedule") Schedule
+                a(href="#registration") Registration
+                a(href="#faq") FAQ
+                a(href="#contact") Contact
+          .menu__overlay(hidden)
+
+          div.poster
+            include components/poster.pug
+          
+          .about
+            include components/about.pug
+          
+          - var whatsappUrl = "whatsapp://send?text=Check out this awesome contest: https://www.google.co.in";
+          
+          .share
+            a(target="_blank" rel="noopener noreferrer" href="whatsapp://send?text=Check out this awesome contest: https://www.google.co.in" data-action="share/whatsapp/share")
+              img(alt="whatsapp" src="https://img.icons8.com/office/50/000000/whatsapp.png")
+          
+          div.schedule#schedule
+            h1 Schedule
+            .timeline
+              ul
+                li
+                  span 12 Sept - 27 Sept
+                  .content
+                    h3 Registration
+                    p.  
+                      Registration will start on 13th September at 12:00 AM 
+                      and will end on 27th September at 11:59 PM.
+                li
+                  span 12 Sept - 27 Sept
+                  .content
+                    h3 Registration
+                    p.  
+                      Registration will start on 13th September at 12:00 AM 
+                      and will end on 27th September at 11:59 PM.
+                li
+                  span 12 Sept - 27 Sept
+                  .content
+                    h3 Registration
+                    p.  
+                      Registration will start on 13th September at 12:00 AM 
+                      and will end on 27th September at 11:59 PM.
+          
+          div#registration 
+            h1 Registration
+            ol 
+              li 
+                | Only one member from each team needs to fill up the registration form and enter the details of both the members.
+              li
+                | Make sure you and your teammate are registered on 
+                a(target="_blank" href="https://www.codechef.com") Codechef
+                |  before filling up the form, as we will require your Codechef userIDs.
+              li
+                | You can pay via UPI only. Pay on this UPI ID XXXXXXXX (will update soon). After doing the payment, you have to fill up the registration form and mention your transaction ID to confirm your registration.
+              li Further information will be given to you once you have registered successfully. 
+            #button-wrapper
+              button Opening Soon
+
+          div#faq
+            h1 FAQ
+            #qs
+              button.query.collapsed(type="button" data-toggle="collapse" data-target="#q1")
+                | How is it conducted?
+              #q1.collapse.answer
+                strong BUG4EVER 2019 comprises of the following rounds:
+                br
+                br
+                strong Qualifier Round:
+                br
+                |             Qualifier round consists of an online contest which will be conducted from 29th September to 2nd October.
+                br
+                br
+                strong Onsite Finale:
+                br
+                |             It will be 3 hour round conducted in SIES Graduate School of Technology, Nerul.
+              button.query.collapsed(type="button" data-toggle="collapse" data-target="#q2")
+                | How do I register?
+              #q2.collapse.answer
+                | First you have to make sure you and your teammate are registered on 
+                b Codechef
+                | .
+                br
+                br
+                |             Then you have to complete the payment on 
+                b XXXXXXX (will update soon) UPI ID
+                | . You can then fill the registration form.
+                br
+                br
+                strong Note:
+                |  Make sure that you are mentioning the 
+                b transaction ID
+                |  for your payment in the registration form.
+                br
+              button.query.collapsed(type="button" data-toggle="collapse" data-target="#q3")
+                | What if I have been never to a programming contest?
+              #q3.collapse.answer
+                | BUG4EVER is the best way to start. Our aim is to provide a place to learn in a short amount of time, interact and learn from other like minded people.
+                br
+                br
+                |             You can practice some questions 
+                a(target="_blank" href="https://www.codechef.com/problems/school?sort_by=SuccessfulSubmission&sorting_order=desc") HERE
+                | .
+              button.query.collapsed(type="button" data-toggle="collapse" data-target="#q4")
+                | Can I refer to internet during contest?
+              #q4.collapse.answer
+                | Yes. We do encourage referencing of online resources in case of any difficulty but any form of plagiarism will be met by strict action.
+              button.query.collapsed(type="button" data-toggle="collapse" data-target="#q5")
+                | What should I carry along for the finals?
+              #q5.collapse.answer
+                | Any valid Identity Proof or College ID Card
+              button.query.collapsed(type="button" data-toggle="collapse" data-target="#q6")
+                | What will be provided?
+              #q6.collapse.answer
+                | You will provided with a workstation and Internet connection for competing. You will be provided with stationary material if necessary.
+              button.query.collapsed(type="button" data-toggle="collapse" data-target="#q7")
+                | What are the Prizes and Certificates?
+              #q7.collapse.answer
+                | Prizes worth 10,000 are to be won. Goodies and Certificates will be given to all the finalists.
+
+          #contact
+            .contact-title
+              img#contactlogo(width="32px" src="https://res.cloudinary.com/siesgstarena/image/upload/v1568130858/arena/bug4ever2019/assets/phone.png" alt="")
+              h1 Contact Us
+            br
+            .contact-body
+              #phones
+                div
+                  strong Call us:
+                  br
+                .row
+                  a(target="_blank" href="tel:+919833394430").member
+                    img(width="80px" src="https://github.com/Swap76.png")
+                    span Swapnil
+                  a(target="_blank" href="tel:+919372599190").member 
+                    img(src="https://github.com/ac030540.png" width="80px")
+                    span Ashok
+                  a(target="_blank" href="tel:+918850579478").member
+                    img(src="https://github.com/harshagr18.png" width="80px")
+                    span Harsh
+              #mailmap.row
+                #mail.col-lg-6.col-md-6.col-sm-12
+                  a(target="_blank" href="mailto:codechef@siesgst.ac.in")
+                    img(width="22px" src="https://res.cloudinary.com/siesgstarena/image/upload/v1568130859/arena/bug4ever2019/assets/mail.png" alt="")
+                    |   codechef@siesgst.ac.in
+                  br
+                  br
+                  #social
+                    a(target="_blank" href="https://instagram.com/siesgstarena")
+                      img(width="24px" src="https://res.cloudinary.com/siesgstarena/image/upload/v1568130857/arena/bug4ever2019/assets/insta.png" alt="")
+                    a(target="_blank" href="https://fb.com/siesgstarena")
+                      img(width="23px" src="https://res.cloudinary.com/siesgstarena/image/upload/v1568130858/arena/bug4ever2019/assets/fb.png" alt="")
+                    a(target="_blank" href="https://twitter.com/@arenaCodeChef")
+                      img(width="24px" src="https://res.cloudinary.com/siesgstarena/image/upload/v1568130858/arena/bug4ever2019/assets/twitter.png" alt="")
+                    a(target="_blank" href="https://medium.com/siesgstarena")
+                      img(width="24px" src="https://res.cloudinary.com/siesgstarena/image/upload/v1568130859/arena/bug4ever2019/assets/medium.png" alt="")
+                    a(target="_blank" href="https://github.com/siesgstarena")
+                      img(width="23px" src="https://res.cloudinary.com/siesgstarena/image/upload/v1568130859/arena/bug4ever2019/assets/github.png" alt="")
+                    a(target="_blank" href="https://www.linkedin.com/company/siesgstarena")
+                      img(width="23px" src="https://res.cloudinary.com/dh6iqxujx/image/upload/v1599550272/Arena/LI-In-Bug_ozqerv.png")
+                    a(target="_blank" href="https://dev.to/siesgstarena")
+                      img(width="23px" src="https://d2fltix0v2e0sb.cloudfront.net/dev-black.png")
+                #map.col-lg-6.col-md-6.col-sm-12
+                  a(target="_blank" href="https://goo.gl/maps/2LRzECRXtrG2")
+                    img(width="16px" src="https://res.cloudinary.com/siesgstarena/image/upload/v1568130859/arena/bug4ever2019/assets/map.png" alt="")
+                    |   SIES Graduate School of Technology
+                  h6
+                    | Sri Chandrasekarendra Saraswati Vidyapuram, Sector-V, Nerul, Navi Mumbai, Maharastra - 400706.
+
+        
+        
+        
+        script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+        script(src="static/js/bootstrap.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js")
+        script(src="https://cdn.jsdelivr.net/gh/juliangarnier/anime/lib/anime.min.js")
+        script(src="./index.js")
