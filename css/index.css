@@ -50,8 +50,6 @@ button {
 #main{
   margin-top: 84px;
   display: none;
-  /* background: rgb(255,84,78);
-  background: linear-gradient(130deg, rgba(255,84,78,1) 26%, rgba(255,255,255,1) 50%); */
 }
 
 /* ABOUT */
@@ -69,7 +67,7 @@ button {
 .row-new{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  
+  grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
 }
 .row-new:nth-child(even) .image{
   order: 2;
@@ -233,6 +231,11 @@ button {
 /* REGISTRATION  */
 #registration {
   padding: 4% 12%;
+  background-color: #FF544E;
+  color: #ffffff;
+}
+#registration a{
+  color: #f4f4ef;
 }
 #registration ol li {
   font-family: 'Lexend Deca';
@@ -244,7 +247,8 @@ button {
 }
 #registration button{
   padding: 0.2em 0.5em;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+ 
   border: 0.1em solid #FF544E;
   font-size: 1.25em;
   margin: 1em 0;
@@ -393,6 +397,7 @@ button {
 
 .share {
   position: fixed;
+  display: none;
   bottom: 30px;
   left: 5%;
   border-radius: 50%;
@@ -431,5 +436,10 @@ button {
   }
   h1{
     font-size: 1.5em;;
+  }
+}
+@media(max-width: 500px){
+  .share{
+    display: block;
   }
 }

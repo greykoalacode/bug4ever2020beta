@@ -16,7 +16,6 @@ html
             button.menu__button
               div
                 div
-              | Menu
             section.menu__body(hidden)
               .menu__header
                 label 
@@ -24,6 +23,9 @@ html
                   p BUG4EVER
                 button(title="Close")
                   | X
+              .menu__content
+                a(target="_blank" rel="noopener noreferrer" href=encodeURI("http://wa.me?text=Check out this awesome contest: https://www.google.co.in") data-action="share/whatsapp/share")
+                  img(alt="whatsapp" src="https://img.icons8.com/office/50/000000/whatsapp.png")
               .menu__links
                 a(href="#about") About
                 a(href="#schedule") Schedule
@@ -40,9 +42,9 @@ html
           
           - var whatsappUrl = "whatsapp://send?text=Check out this awesome contest: https://www.google.co.in";
           
-          .share
-            a(target="_blank" rel="noopener noreferrer" href="whatsapp://send?text=Check out this awesome contest: https://www.google.co.in" data-action="share/whatsapp/share")
-              img(alt="whatsapp" src="https://img.icons8.com/office/50/000000/whatsapp.png")
+          //- .share
+          //-   a(target="_blank" rel="noopener noreferrer" href=encodeURI("http://wa.me?text=Check out this awesome contest: https://www.google.co.in") data-action="share/whatsapp/share")
+          //-     img(alt="whatsapp" src="https://img.icons8.com/office/50/000000/whatsapp.png")
           
           div.schedule#schedule
             h1 Schedule
