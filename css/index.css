@@ -18,7 +18,7 @@ button {
 .poster{
   color: #FF544E;
   height: 90vh;
-  background-image: url("../static/images/intro.jpg");
+  background-image: url("https://res.cloudinary.com/dh6iqxujx/image/upload/v1599669314/Arena/intro_k4gg7b.jpg");
   background-size: cover;
   background-position: center;
   object-fit: cover;
