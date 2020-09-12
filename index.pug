@@ -41,51 +41,13 @@ html
             include components/about.pug
           
           - var whatsappUrl = "whatsapp://send?text=Check out this awesome contest: https://www.google.co.in";
-          
-          //- .share
-          //-   a(target="_blank" rel="noopener noreferrer" href=encodeURI("http://wa.me?text=Check out this awesome contest: https://www.google.co.in") data-action="share/whatsapp/share")
-          //-     img(alt="whatsapp" src="https://img.icons8.com/office/50/000000/whatsapp.png")
+
           
           div.schedule#schedule
-            h1 Schedule
-            .timeline
-              ul
-                li
-                  span 12 Sept - 27 Sept
-                  .content
-                    h3 Registration
-                    p.  
-                      Registration will start on 13th September at 12:00 AM 
-                      and will end on 27th September at 11:59 PM.
-                li
-                  span 12 Sept - 27 Sept
-                  .content
-                    h3 Registration
-                    p.  
-                      Registration will start on 13th September at 12:00 AM 
-                      and will end on 27th September at 11:59 PM.
-                li
-                  span 12 Sept - 27 Sept
-                  .content
-                    h3 Registration
-                    p.  
-                      Registration will start on 13th September at 12:00 AM 
-                      and will end on 27th September at 11:59 PM.
+            include components/schedule.pug
           
           div#registration 
-            h1 Registration
-            ol 
-              li 
-                | Only one member from each team needs to fill up the registration form and enter the details of both the members.
-              li
-                | Make sure you and your teammate are registered on 
-                a(target="_blank" href="https://www.codechef.com") Codechef
-                |  before filling up the form, as we will require your Codechef userIDs.
-              li
-                | You can pay via UPI only. Pay on this UPI ID XXXXXXXX (will update soon). After doing the payment, you have to fill up the registration form and mention your transaction ID to confirm your registration.
-              li Further information will be given to you once you have registered successfully. 
-            #button-wrapper
-              button Opening Soon
+            include components/registration.pug
 
           div#faq
             h1 FAQ
